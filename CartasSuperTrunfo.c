@@ -12,12 +12,14 @@ int main() {
     char codigo_cidade[10], nome_cidade[20];
     int populacao, pontos_turisticos;
     float area, pib;
-
-    printf("Digite o codigo da cidade: ");
-    scanf("%s", &codigo_cidade);
+    float densidade, pib_per_capta;
+    
 
     printf("Digite o nome da cidade: ");
-    scanf("%s", &nome_cidade);
+    scanf("%s", nome_cidade);
+
+    printf("Digite o codigo da cidade: ");
+    scanf("%s", codigo_cidade);
 
     printf("Digite a população da cidade: ");
     scanf("%d", &populacao);
@@ -39,18 +41,27 @@ int main() {
 
     printf("O pib é de: %f \n", pib);
  
-    printf("A área é: %f \n", area);
+    printf("A área é: %.2fkm² \n", area);
 
     printf("Existem %d pontos turísticos \n", pontos_turisticos);
+
+    densidade = populacao / area;
+    printf("A densidade populacional é: %.2f \n", densidade);
+
+    pib_per_capta = pib /populacao;
+    printf("O pib per capita é de: %.2f \n", pib_per_capta);
     
     // ---------------------------------------------------------------------------------------------------------------------------
 
 
-    printf("Digite o codigo da cidade: ");
-    scanf("%s", &codigo_cidade);
-    
+
+    //CIDADE2
+
     printf("Digite o nome da cidade: ");
-    scanf("%s", &nome_cidade);
+    scanf("%s", nome_cidade);
+    
+    printf("Digite o codigo da cidade: ");
+    scanf("%s", codigo_cidade);
     
     printf("Digite a população da cidade: ");
     scanf("%d", &populacao);
@@ -75,16 +86,15 @@ int main() {
     printf("A área é: %f \n", area);
     
     printf("Existem %d pontos turísticos \n", pontos_turisticos);
-        
 
-   
-    // Cadastro das Cartas:
-    // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
-    // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
-    
-    // Exibição dos Dados das Cartas:
-    // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
-    // Exiba os valores inseridos para cada atributo da cidade, um por linha.
+    printf("A densidade populacional é: %.2f \n", densidade);
+
+    printf("O pib per capita é de: %2.f \n", pib_per_capta);
+
 
     return 0;
+
+
 }
+
+   
